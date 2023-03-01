@@ -2,7 +2,7 @@ name: Push to main
 
 on:
   push:
-    branches: [main]
+    branches: [mainNope]
 
 jobs:
   tests:
