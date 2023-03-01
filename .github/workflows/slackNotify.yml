@@ -3,7 +3,7 @@ on:
   workflow_run:
     workflows:
       - Push to main
-      - release
+      - release2
     types:
       - completed
 
