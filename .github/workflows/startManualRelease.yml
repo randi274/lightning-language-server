@@ -27,11 +27,3 @@ jobs:
           skip-on-empty: false
           output-file: false
           pre-commit: ./scripts/bump-lerna-version.js
-      - name: Create Github Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.IDEE_GH_TOKEN }}
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
